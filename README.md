@@ -1,3 +1,4 @@
+A minimal flask web app served with uWSGI and nginx.
 
     $ ian build -cfi
     $ sudo ln -s /etc/nginx/sites-available/hello /etc/nginx/sites-enabled/
