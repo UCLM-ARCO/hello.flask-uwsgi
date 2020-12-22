@@ -1,0 +1,21 @@
+ upstream wsgicluster {
+    server unix:///tmp/hello.sock;
+}
+
+server {
+    listen 8181;
+    server_name SITE_URL;
+    error_log /tmp/hello_error.log;
+    access_log /tmp/hello_access.log;
+    location / {
+        include /etc/nginx/uwsgi_params;
+        uwsgi_pass wsgicluster;
+    }
+    location -^/(img|js|css)/ {
+        root SITE_DIR/public;
+        expires 30d;
+    }
+    location = /favicon.ico {
+        log_not_found off;
+    }
+}

@@ -1,0 +1,14 @@
+Source: hello-flask-uwsgi
+Section: utils
+Priority: optional
+Maintainer: David Villa Alises <David.Villa@gmail.com>
+Build-Depends: debhelper (>= 11), quilt, python3, dh-python
+Standards-Version: 4.5.0
+
+Package: hello-flask-uwsgi
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends},
+	 python3-flask, uwsgi, uwsgi-plugin-python3
+Description: webapp to see and manage remote log messages
+ A webapp to see and manage remote log messages  from a set of servers and
+ services.
