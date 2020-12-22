@@ -1,4 +1,3 @@
-::
 
     $ ian build -ci
     $ sudo ln -s /etc/nginx/sites-available/hello /etc/nginx/sites-enabled/
